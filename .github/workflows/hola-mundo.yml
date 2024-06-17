@@ -7,7 +7,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
-              run: actions/checkout@v3
+              uses: actions/checkout@v3
             - name: definir varibles
               run: echo "USERNAME= ${{ github.actor }}" >> $GITHUB_ENV
             - name: Imprimir un mensaje
