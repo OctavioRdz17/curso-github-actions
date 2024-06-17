@@ -10,5 +10,9 @@ jobs:
               run: actions/checkout@v3
             - name: definir varibles
               run: echo "USERNAME= ${{ github.actor }}" >> $GITHUB_ENV
+            - name: Imprimir un mensaje
+              run: echo "Hola mundo, mi nombre es ${{ github.actor }}"
+            - name: Imprimir un mensaje
+              run: ls
             - name: Correr el archivo de python
-              run: python main.py
+              run: python hola_mundo.py
