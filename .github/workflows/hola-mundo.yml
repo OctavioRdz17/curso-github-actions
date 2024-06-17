@@ -1,0 +1,18 @@
+# ayudame a crear un workflow de github actions que corra un archivo de python main.py
+name: Hola Mundo
+run-name: Estoy aprendiendo a usar github actions!
+on: [push]
+jobs:
+    hola-mundo:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+            - name: definir varibles
+              run: echo "USERNAME= ${{ github.actor }}" >> $GITHUB_ENV
+            - name: Imprimir un mensaje
+              run: echo "Hola mundo, mi nombre es ${{ github.actor }}"
+            - name: Imprimir un mensaje
+              run: ls
+            - name: Correr el archivo de python
+              run: python hola_mundo.py
